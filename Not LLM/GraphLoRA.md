@@ -1,3 +1,9 @@
+### **Why in not LLM?**
+
+LoRA is used to fine tune GNN
+
+---
+
 The paper **"GraphLoRA: Structure-Aware Contrastive Low-Rank Adaptation for Cross-Graph Transfer Learning"** introduces a parameter-efficient framework designed to adapt pre-trained Graph Neural Networks (GNNs) to new, diverse graph domains.
 
 ### **The Core Problem**
@@ -18,7 +24,3 @@ GraphLoRA addresses these issues by freezing the pre-trained GNN and injecting a
 - **Efficiency:** GraphLoRA is highly parameter-efficient, achieving state-of-the-art results by tuning only **7% to 20% of the total parameters**.
 - **Superior Performance:** In extensive experiments across eight real-world datasets (including citation and co-purchase networks), GraphLoRA outperformed 14 baselines. It showed an average improvement of **10.12%** over direct transfer methods and was particularly effective in **10-shot settings**, where labels are extremely limited.
 - **Mitigating Forgetting:** The method proved highly effective at retaining source-domain knowledge, showing significantly less performance decline than full fine-tuning when tested back on the original source graph.
-
-### **Category Classification**
-
-Like the previously discussed ENGINE and GaLoRA papers, this work best fits into the category of **Parameter adaptation (e.g., adapters, LoRA, GNN-augmented layers)** because its primary contribution is a PEFT mechanism that adapts a frozen backbone via auxiliary structural modules.
